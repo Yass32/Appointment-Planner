@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Appointment Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based application for managing contacts and appointments. Users can add contacts, schedule appointments, and view them in a structured format.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add new contacts with name, phone number, and email.
+- Schedule appointments with a title, date, time, and associated contact.
+- View all contacts and appointments in a clean, organized layout.
+- Navigation between Contacts and Appointments pages using React Router.
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+src/
+├── App.js
+├── index.js
+├── components/
+│   ├── appointmentForm/
+│   │   └── AppointmentForm.js
+│   ├── contactForm/
+│   │   └── ContactForm.js
+│   ├── contactPicker/
+│   │   └── ContactPicker.js
+│   ├── root/
+│   │   └── Root.js
+│   ├── tile/
+│   │   └── Tile.js
+│   └── tileList/
+│       └── TileList.js
+├── containers/
+│   ├── appointmentsPage/
+│   │   └── AppointmentsPage.js
+│   └── contactsPage/
+│       └── ContactsPage.js
+public/
+├── index.html
+└── index.css
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/appointment-planner.git
+   cd appointment-planner
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Scripts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `npm start`: Runs the app in development mode.
+- `npm run build`: Builds the app for production.
+- `npm test`: Launches the test runner.
+- `npm run eject`: Ejects the app configuration (use with caution).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Components
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Contacts Page
 
-## Learn More
+- **File**: [`ContactsPage`](src/containers/contactsPage/ContactsPage.js)
+- Allows users to add new contacts and view the list of existing contacts.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Appointments Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **File**: [`AppointmentsPage`](src/containers/appointmentsPage/AppointmentsPage.js)
+- Allows users to schedule appointments and view the list of existing appointments.
 
-### Code Splitting
+### Shared Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **TileList**: Renders a list of tiles for displaying contacts or appointments ([`TileList`](src/components/tileList/TileList.js)).
+- **Tile**: Displays individual contact or appointment details ([`Tile`](src/components/tile/Tile.js)).
+- **ContactPicker**: Dropdown for selecting a contact when scheduling an appointment ([`ContactPicker`](src/components/contactPicker/ContactPicker.js)).
 
-### Analyzing the Bundle Size
+## Styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The app uses a custom CSS file located at [`public/index.css`](public/index.css) for styling.
 
-### Making a Progressive Web App
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- React: ^18.2.0
+- React Router DOM: ^6.9.0
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the LICENSE file for details.
